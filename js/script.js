@@ -36,7 +36,7 @@ function generatePassword() {
     // Alert user that at least one character type must be selected
     alert('Must select at least one character type');
     // Clear the password
-    document.querySelector("#password").value = " ";
+    document.querySelector("#password").value = '';
     // Return to the beginning of the function
     return;
   }
@@ -62,7 +62,7 @@ function generatePassword() {
   // Loop through the string of all types of characters selected by the user to be used in password
   for (var i = 0; i < passwordLength; i++) {
      // Add a random character from the string of confirmed types of characters to the password variable
-    password += tmpsswd[Math.floor(Math.random() * .length)];
+    password += tmpsswd[Math.floor(Math.random() * tmpsswd.length)];
    }
   // Store the password in the document element with id of #password
   passwordText.value = password;
@@ -80,10 +80,10 @@ function writePassword() {
   // Append the password to the document element with id of #password to display password
   passwordText.append(password); 
   // Return the password
-  return password;
+  return;
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 // Clear the password from memory
-password = " ";
+password = '';
 // End of js code
