@@ -1,71 +1,47 @@
-// Assign document element with id of #generate in a variable generateBtn to later be used to add event listener
+// Create variables for DOM elements
 let generateBtn = document.querySelector("#generate");
 let passwordText = document.querySelector('#password');
-// Initialize variables to be used in the generatePassword function
-let emptyString = '';
-let password = emptyString;
-let tmpsswd = emptyString;
-let passwordLength = emptyString;
-// Create a function to generate the password and store in a variable password
+//  Generate function to generate password
 function generatePassword() {
-  //define dtrings of characters to be used in password
-  let lowerCase = 'abcdefghijklmnopqrstuvwxyz';
-  let upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  let numbers = '0123456789';
-  let symbols = '!@#$%^&*()_+~`|}{[]\:;?><,./-=""';
-  // Prompt user for password length
-  let passwordLength = prompt(
-    'How many characters would you like your password to contain?'
-  );
-  // Check if password length is between 8 and 128 characters
+  //  Create strings for possible characters
+  const lowerCase = 'abcdefghijklmnopqrstuvwxyz';
+  const upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const numbers = '0123456789';
+  const symbols = '!@#$%^&*()_+~`|}{[]\:;?><,./-=""';
+  //  Prompt for password length
+  const passwordLength = prompt('How many characters would you like your password to contain?');
+  //  Check if password is between 8 and 128 characters
   if (passwordLength < 8 || passwordLength > 128) {
     alert('Password must be between 8 and 128 characters');
     return;
   }
-  // Confirm if user wants to include lowercase, uppercase, numeric, and/or special characters
-  let hasLower = confirm('Click OK to confirm including lowercase characters, otherwise if you do not want lower case characters press cancel to move on.');
-  let hasUpper = confirm('Click OK to confirm including uppercase characters, otherwise if you do not want upper case characters press cancel to move on.');
-  let hasNumber = confirm('Click OK to confirm including numeric characters, otherwise if you do not want numbers characters press cancel to move on.');
-  let hasSymbol = confirm('Click OK to confirm including special characters, otherwise if you do not want special characters press cancel to move on.');
-  // Check if user confirmed at least one character type
-  if (
-    hasLower === false &&
-    hasUpper === false &&
-    hasNumber === false &&
-    hasSymbol === false
-  ) {
-    // Alert user that at least one character type must be selected
+  //  Prompt for character types to include in password
+  const hasLower = confirm('Click OK to confirm including lowercase characters');
+  const hasUpper = confirm('Click OK to confirm including uppercase characters');
+  const hasNumber = confirm('Click OK to confirm including numeric characters');
+  const hasSymbol = confirm('Click OK to confirm including special characters');
+  //  Check if at least one character type is selected
+  if (!hasLower && !hasUpper && !hasNumber && !hasSymbol) {
     alert('You MUST select at least one character type!');
-    // Clear tmpsswd
-    passwordText.value = emptyString;
-    // Return to the beginning of the function
+    passwordText.value = '';
     return;
   } 
-  // Add lowercase characters to the string of all characters to be used in password if confirmed by the user (ternary operator)
-  tmpsswd += hasLower ? lowerCase : emptyString;
-  // Add uppercase characters to the string of all characters to be used in password if confirmed by user (ternary operator)
-  tmpsswd += hasUpper ? upperCase : emptyString;
-  // Add numeric characters to the string of all characters to be used in password if confirmed by user (ternary operator)
-  tmpsswd += hasNumber ? numbers : emptyString;
-  // Add special characters to the string of all characters to be used in password if confirmed by user (ternary operator)
-  tmpsswd += hasSymbol ? symbols : emptyString;
-  // End Create a string of all user selected types of characters to be used in password
-  // "Loop" through the string of all types of characters confirmed by the user and randomly select an index of a character to add this character to the password
-  password = Array.from({length: passwordLength}, () => tmpsswd[Math.floor(Math.random() * tmpsswd.length)]).join('');
-  // Store the password in the document element with id of #password
+  //  Create an array of selected characters
+  let selectedCharacters = '';
+  selectedCharacters += hasLower ? lowerCase : '';
+  selectedCharacters += hasUpper ? upperCase : '';
+  selectedCharacters += hasNumber ? numbers : '';
+  selectedCharacters += hasSymbol ? symbols : '';
+  //  Generate password with selected characters and password length
+  let password = Array.from({length: passwordLength}, () => selectedCharacters[Math.floor(Math.random() * selectedCharacters.length)]).join('');
+  //  Write password to the #password
   passwordText.value = password;
-  // return the password
   return;
 }
-// Write password to the #password input
+// write password to the #password element in the HTML document using document.querySelector
 function writePassword() {
-  // Call the function to generate the password
+  //  Call generatePassword
   generatePassword();
-  // Append the password to the document element with id of #password to display password
-  passwordText.ATTRIBUTE_NODE(passwordText.value); 
-  // Return the password
-  return;
 }
-// Add event listener to generate button
+// Add event listener to generate button to call generatePassword when clicked
 generateBtn.addEventListener("click", writePassword);
-// End of js code
