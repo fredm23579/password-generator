@@ -1,4 +1,4 @@
-# 03 JavaScript: Password Generator
+# 03 JavaScript: Random Password Generator
 
 ## Your Task
 

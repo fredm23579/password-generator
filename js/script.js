@@ -1,7 +1,7 @@
 // Create variables for DOM elements
 let generateBtn = document.querySelector("#generate");
 let passwordText = document.querySelector('#password');
-//  Generate function to generate password
+// Function to generate password
 function generatePassword() {
   //  Create strings for possible characters
   const lowerCase = 'abcdefghijklmnopqrstuvwxyz';
@@ -26,7 +26,7 @@ function generatePassword() {
     passwordText.value = '';
     return;
   } 
-  //  Create an array of selected characters
+  //  Create an string of selected characters
   let selectedCharacters = '';
   selectedCharacters += hasLower ? lowerCase : '';
   selectedCharacters += hasUpper ? upperCase : '';
@@ -34,7 +34,7 @@ function generatePassword() {
   selectedCharacters += hasSymbol ? symbols : '';
   //  Generate password with selected characters and password length
   let password = Array.from({length: passwordLength}, () => selectedCharacters[Math.floor(Math.random() * selectedCharacters.length)]).join('');
-  //  Write password to the #password
+  //  Assign password value to the #password element in the HTML document using document.querySelector
   passwordText.value = password;
   return;
 }
