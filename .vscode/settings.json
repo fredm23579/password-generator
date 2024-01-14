@@ -14,5 +14,10 @@
         "comments": true,
         "strings": true
     },
-    "editor.quickSuggestionsDelay": 100
+    "editor.quickSuggestionsDelay": 100,
+    "graalvm.home": "",
+    "graalvm.installations": [
+        ""
+    ],
+    "java.configuration.runtimes": []
 }
