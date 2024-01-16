@@ -7,7 +7,7 @@ function generatePassword() {
   const lowerCase = 'abcdefghijklmnopqrstuvwxyz';
   const upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const numbers = '0123456789';
-  const symbols = '!@#$%^&*()_+~`|}{[]\:;?><,./-=""';
+  const symbols = '!@#$%^&*()_+~`|}{[]\:;?><,./-=';
   //  Prompt for password length
   const passwordLength = prompt('How many characters would you like your password to contain?');
   //  Check if password is between 8 and 128 characters
