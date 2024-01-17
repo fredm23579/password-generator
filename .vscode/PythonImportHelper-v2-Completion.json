@@ -1,0 +1,64 @@
+[
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "string",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "string",
+        "description": "string",
+        "detail": "string",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "generatePassword",
+        "kind": 2,
+        "importPath": "py.script",
+        "description": "py.script",
+        "peekOfCode": "def generatePassword():\n    #initialize password variable\n    password = ''\n    # prompt the user for password length\n    passwordLength = soup.document.prompt(\"How many characters would you like your password to be?\")\n    # prompt the user if they want upper case lgettrs.\n    upperCase = soup.document.prompt(\"Would you like uppercase letters?\")\n    # prompt the user if they want lower case lgettrs.\n    lowerCase = soup.document.prompt(\"Would you like lowercase letters?\")\n    # prompt the user if they want numbers.",
+        "detail": "py.script",
+        "documentation": {}
+    },
+    {
+        "label": "generateBtn",
+        "kind": 5,
+        "importPath": "py.script",
+        "description": "py.script",
+        "peekOfCode": "generateBtn = soup.document.querySelector(\"#generate\")\npasswordText = soup.document.querySelector('#password')\n# Generate function to generate random password.\ndef generatePassword():\n    #initialize password variable\n    password = ''\n    # prompt the user for password length\n    passwordLength = soup.document.prompt(\"How many characters would you like your password to be?\")\n    # prompt the user if they want upper case lgettrs.\n    upperCase = soup.document.prompt(\"Would you like uppercase letters?\")",
+        "detail": "py.script",
+        "documentation": {}
+    },
+    {
+        "label": "passwordText",
+        "kind": 5,
+        "importPath": "py.script",
+        "description": "py.script",
+        "peekOfCode": "passwordText = soup.document.querySelector('#password')\n# Generate function to generate random password.\ndef generatePassword():\n    #initialize password variable\n    password = ''\n    # prompt the user for password length\n    passwordLength = soup.document.prompt(\"How many characters would you like your password to be?\")\n    # prompt the user if they want upper case lgettrs.\n    upperCase = soup.document.prompt(\"Would you like uppercase letters?\")\n    # prompt the user if they want lower case lgettrs.",
+        "detail": "py.script",
+        "documentation": {}
+    }
+]
