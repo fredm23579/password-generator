@@ -15,23 +15,9 @@
         "strings": true
     },
     "editor.quickSuggestionsDelay": 100,
-    "graalvm.home": "c:\\Users\\motta\\Downloads\\graalvm-jdk-21.0.1+12.1",
+    "graalvm.home": "",
     "graalvm.installations": [
-        "",
-        "c:\\Users\\motta\\Downloads\\graalvm-jdk-21.0.1+12.1"
+        ""
     ],
-    "java.configuration.runtimes": [
-        {
-            "name": "JavaSE-21",
-            "path": "c:\\Users\\motta\\Downloads\\graalvm-jdk-21.0.1+12.1",
-            "default": true
-        }
-    ],
-    "java.home": "c:\\Users\\motta\\Downloads\\graalvm-jdk-21.0.1+12.1",
-    "maven.terminal.customEnv": [
-        {
-            "environmentVariable": "JAVA_HOME",
-            "value": "c:\\Users\\motta\\Downloads\\graalvm-jdk-21.0.1+12.1"
-        }
-    ]
+    "java.configuration.runtimes": []
 }
