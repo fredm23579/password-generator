@@ -1,6 +1,6 @@
-# 03 JavaScript: Random Password Generator
+JavaScript: Random Password Generator
 
-## Your Task
+## Task
 
 This application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
 
@@ -45,5 +45,3 @@ The following image shows the web application's appearance and functionality:
 
 * The URL of the GitHub repository, with a unique name and a readme describing the project: https://github.com/fredm23579/password-generator
 
-- - -
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
