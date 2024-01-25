@@ -1,4 +1,4 @@
-JavaScript: Random Password Generator
+# JavaScript: Random Password Generator
 
 ## Task
 
