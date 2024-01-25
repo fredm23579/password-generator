@@ -45,3 +45,8 @@ The following image shows the web application's appearance and functionality:
 
 * The URL of the GitHub repository, with a unique name and a readme describing the project: https://github.com/fredm23579/password-generator
 
+## Contact Info
+For questions or comments, please contact us at motta@g.ucla.edu.
+---
+
+
